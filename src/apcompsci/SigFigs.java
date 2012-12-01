@@ -47,7 +47,12 @@ public class SigFigs {
             }
             else {
                 if(numChar[index] == '0') {
-                    if(!startingZero) {
+                    if(startingZero) {
+                        if(n > 0) {
+                            n++;
+                        }
+                    }
+                    else {
                         n++;
                     }
                 }
@@ -57,9 +62,6 @@ public class SigFigs {
                     }
                     
                     n++;
-                    n += trailingZeroCount;
-                    trailingZeroCount = 0;
-                    trailingZero = false;
                 }
             }
             
