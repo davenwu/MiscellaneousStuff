@@ -48,8 +48,7 @@ public class SigFigs {
             else {
                 if(numChar[index] == '0') {
                     if(!startingZero) {
-                        trailingZeroCount++;
-                        trailingZero = true;
+                        n++;
                     }
                 }
                 else {
